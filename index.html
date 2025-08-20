@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RB Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Smooth transition for background, blur, and shadow */
+      header {
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 h-screen">
+    <!-- Navbar -->
+    <header
+      class="bg-gray-900 bg-opacity-40 text-white fixed w-full z-50 backdrop-blur-md shadow-none"
+    >
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- Logo Image -->
+        <a href="#">
+          <img
+            src="assets/logo.webp"
+            alt="RB Construction Logo"
+            class="h-10 md:h-12"
+          />
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 items-center">
+          <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+          <li>
+            <a href="#services" class="hover:text-yellow-500">Services</a>
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-yellow-500">Projects</a>
+          </li>
+          <li><a href="#about" class="hover:text-yellow-500">About</a></li>
+          <li><a href="team.html" class="hover:text-yellow-500">Team</a></li>
+          <li>
+            <a
+              href="#contact"
+              class="bg-yellow-500 text-gray-900 px-4 py-2 rounded hover:bg-yellow-400 font-semibold"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none text-2xl">
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul
+        id="mobile-menu"
+        class="hidden flex-col bg-gray-900 bg-opacity-90 text-white space-y-4 p-4 md:hidden"
+      >
+        <li><a href="#home" class="block hover:text-yellow-500">Home</a></li>
+        <li>
+          <a href="#services" class="block hover:text-yellow-500">Services</a>
+        </li>
+        <li>
+          <a href="#projects" class="block hover:text-yellow-500">Projects</a>
+        </li>
+        <li><a href="#about" class="block hover:text-yellow-500">About</a></li>
+        <li>
+          <a href="team.html" class="block hover:text-yellow-500">Team</a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="block bg-yellow-500 text-gray-900 px-4 py-2 rounded hover:bg-yellow-400 font-semibold"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </header>
+    <!-- Hero Section Slider -->
+    <section id="home" class="relative h-screen overflow-hidden">
+      <!-- Slides -->
+      <div class="absolute inset-0 w-full h-full">
+        <div
+          class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100"
+        >
+          <img
+            src="assets/hero1.jpg"
+            alt="Construction 1"
+            class="w-full h-full object-cover brightness-50"
+          />
+        </div>
+        <div
+          class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0"
+        >
+          <img
+            src="assets/vent2.jpg"
+            alt="Construction 2"
+            class="w-full h-full object-cover brightness-50"
+          />
+        </div>
+        <div
+          class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0"
+        >
+          <img
+            src="assets/hero3.avif"
+            alt="Construction 3"
+            class="w-full h-full object-cover brightness-50"
+          />
+        </div>
+      </div>
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 flex flex-col justify-center items-start h-full max-w-6xl mx-auto px-6 md:px-12 text-white"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Innovating Infrastructure, Inspiring Growth
+        </h1>
+        <p class="text-lg md:text-2xl mb-8 max-w-xl">
+          RB Construction delivers quality engineering and construction
+          solutions on time and on budget.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="#projects"
+            class="bg-yellow-500 text-gray-900 px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition"
+          >
+            View Projects
+          </a>
+          <a
+            href="#contact"
+            class="border border-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-gray-900 transition"
+          >
+            Get a Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Optional: Slide Indicators -->
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20"
+      >
+        <span
+          class="dot w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer"
+        ></span>
+        <span
+          class="dot w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer"
+        ></span>
+        <span
+          class="dot w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer"
+        ></span>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+      <div
+        class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12"
+      >
+        <!-- Image -->
+        <div class="md:w-1/2">
+          <img
+            src="assets/about1.jpg"
+            alt="Construction Team"
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="md:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            About RB Construction
+          </h2>
+
+          <!-- Values -->
+          <p
+            class="text-yellow-500 font-semibold mb-4 text-base md:text-lg lg:text-xl"
+          >
+            Passion, Honesty, Quality, Ethics
+          </p>
+
+          <!-- Description -->
+          <p class="text-gray-700 mb-4">
+            RB Construction & Engineering Ltd started with the sincere ideology
+            to cater to the industry with a bouquet of products and services—an
+            approach that was lacking back then. A group of highly passionate
+            professionals with hands-on experience and expertise in diverse
+            subjects came together to build this organization.
+          </p>
+
+          <p class="text-gray-700 mb-6 italic">"See you at the top!"</p>
+
+          <!-- Director -->
+          <div class="mt-6 flex items-center space-x-4">
+            <img
+              src="assets/rob1.jpeg"
+              alt="Robinson Abuki"
+              class="w-16 h-16 rounded-full shadow-lg"
+            />
+            <div>
+              <p class="text-gray-900 font-semibold">Robinson Abuki</p>
+              <p class="text-gray-600 text-sm">Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="py-12 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+
+      <!-- Services Grid -->
+      <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- First 9 services (always visible) -->
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i
+            class="bx bx-building-house text-5xl mb-4"
+            style="color: #ffa725"
+          ></i>
+          <h3 class="font-semibold">Builders Works</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-paint text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Renovation, Partitioning & Fit outs</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-wind text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Air Conditioning System</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-fan text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Mechanical Ventilation System</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-cube text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Refrigeration System</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-droplet text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Plumbing Services</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i
+            class="bx bx-shield-quarter text-5xl mb-4"
+            style="color: #ffa725"
+          ></i>
+          <h3 class="font-semibold">Fire Safety, Detection & Protection</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-gas-pump text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">
+            Piping System for Air, Gas, Vacuum, Drainage, Steam & Processing
+          </h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-camera text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">
+            CCTV, Biometric, Electric Fence, Networking & Automation
+          </h3>
+        </div>
+      </div>
+
+      <!-- Hidden extra services -->
+      <div
+        id="moreServices"
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 hidden"
+      >
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-server text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Servers & Data Centres</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-bolt-circle text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Electrical Services</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-home-smile text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Smart Home Automation & BMS System</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-gas-pump text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">LPG Gas Piping Systems</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i
+            class="bx bx-network-chart text-5xl mb-4"
+            style="color: #ffa725"
+          ></i>
+          <h3 class="font-semibold">Structural Cabling, Networking</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-cog text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Building Management System (BMS)</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-hot text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Boiler System</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i
+            class="bx bx-battery-charging text-5xl mb-4"
+            style="color: #ffa725"
+          ></i>
+          <h3 class="font-semibold">Generator Services</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-sun text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Solar Water Heaters</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i
+            class="bx bx-up-arrow-circle text-5xl mb-4"
+            style="color: #ffa725"
+          ></i>
+          <h3 class="font-semibold">Lift / Elevators & Escalators</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-xl text-center">
+          <i class="bx bx-wrench text-5xl mb-4" style="color: #ffa725"></i>
+          <h3 class="font-semibold">Support & Maintenance</h3>
+        </div>
+      </div>
+
+      <!-- See More Button -->
+      <div class="text-center mt-6">
+        <button
+          id="seeMoreBtn"
+          class="px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition"
+        >
+          See More
+        </button>
+      </div>
+    </section>
+    <!-- Interior Service Section -->
+    <section
+      class="relative bg-fixed bg-center bg-cover"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      "
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <div class="relative max-w-6xl mx-auto px-6 py-24 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-100 mb-6">
+          Interior & Exterior Services
+        </h2>
+        <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-10">
+          We transform spaces through innovation and precision — from
+          <span class="font-semibold">concept design</span> to
+          <span class="font-semibold">execution</span>, delivering quality
+          environments that blend aesthetics with functionality.
+        </p>
+
+        <!-- Highlighted Service Tags -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >3D Renders & Drawings</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Ceiling & Lighting</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Flooring</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Partitions & Glass</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Custom Furniture</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Landscaping</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Pools & Gyms</span
+          >
+          <span
+            class="px-4 py-2 bg-white/80 text-gray-900 font-medium rounded-full shadow"
+            >Security & Automation</span
+          >
+        </div>
+
+        <a
+          href="#contact"
+          class="inline-block bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+            Featured Projects
+          </h2>
+          <p class="text-gray-600 mt-2">
+            A showcase of our recent work across different industries
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Project Card 1 -->
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://picsum.photos/600/400?random=1"
+              alt="Project 1"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+              <h3 class="text-white text-xl font-semibold">
+                Luxury Villa Interior
+              </h3>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://picsum.photos/600/400?random=2"
+              alt="Project 2"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+              <h3 class="text-white text-xl font-semibold">
+                Corporate Office Design
+              </h3>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://picsum.photos/600/400?random=3"
+              alt="Project 3"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+              <h3 class="text-white text-xl font-semibold">
+                Modern Kitchen Space
+              </h3>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://picsum.photos/600/400?random=4"
+              alt="Project 4"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+              <h3 class="text-white text-xl font-semibold">
+                Hotel Lobby Renovation
+              </h3>
+            </div>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://picsum.photos/600/400?random=5"
+              alt="Project 5"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+              <h3 class="text-white text-xl font-semibold">
+                Outdoor Landscaping
+              </h3>
+            </div>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://picsum.photos/600/400?random=6"
+              alt="Project 6"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500"
+            >
+              <h3 class="text-white text-xl font-semibold">Commercial Space</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- See More Button -->
+        <div class="text-center mt-12">
+          <a
+            href="#projects"
+            class="px-6 py-3 bg-[#FFA725] text-white font-semibold rounded-lg shadow-md hover:bg-[#e69100] transition"
+          >
+            See More Projects
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Customers Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <!-- Title -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800">Our Customers</h2>
+          <p class="text-gray-600 mt-2">
+            Trusted by leading companies and organizations
+          </p>
+        </div>
+
+        <!-- Logos Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center"
+        >
+          <div
+            class="flex justify-center grayscale hover:grayscale-0 transition"
+          >
+            <img
+              src="assets/amka.png"
+              alt="Customer 1"
+              class="h-16 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center grayscale hover:grayscale-0 transition"
+          >
+            <img
+              src="assets/asperaa.png"
+              alt="Customer 2"
+              class="h-16 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center grayscale hover:grayscale-0 transition"
+          >
+            <img
+              src="assets/magnet.png"
+              alt="Customer 3"
+              class="h-16 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center grayscale hover:grayscale-0 transition"
+          >
+            <img
+              src="assets/plat.png"
+              alt="Customer 4"
+              class="h-16 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center grayscale hover:grayscale-0 transition"
+          >
+            <img
+              src="assets/sicpa.png"
+              alt="Customer 5"
+              class="h-16 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center grayscale hover:grayscale-0 transition"
+          >
+            <img src="assets/" alt="Customer 6" class="h-16 object-contain" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="bg-gray-900 text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+          <form action="#" method="POST" class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2">Name</label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none text-white"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Phone</label>
+              <input
+                type="text"
+                placeholder="+254 700 000 000"
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none text-white"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                placeholder="you@example.com"
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none text-white"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Message</label>
+              <textarea
+                rows="4"
+                placeholder="Write your message here..."
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none text-white"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
+          <div class="space-y-4 text-gray-300">
+            <p>
+              <strong>Head Office:</strong> Waiyaki Way - Red Hill Link Road,
+              Nairobi, Kenya
+            </p>
+            <p>
+              <strong>Address:</strong> 2nd Floor, Astrol Square Rosslyn,
+              Westland’s Red Hill Link Road, P.O. Box 16945-00100 Nairobi
+            </p>
+            <p>
+              <strong>Phone:</strong> +254-721744567 (Head Office),
+              +254-782055555 (Sales), +254-783055555 (Customer Service)
+            </p>
+            <p>
+              <strong>WhatsApp / Mobile:</strong> +254-702-284-771,
+              +254-782-055-555
+            </p>
+            <p><strong>Email:</strong> admin@rbconstruction-engltd.com</p>
+            <p><strong>Website:</strong> www.rb-construction-engltd.com</p>
+            <p>
+              <strong>Working Hours:</strong> Mon–Fri: 08:00AM - 06:00PM | Sat:
+              09:00AM - 04:00PM
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-100 text-gray-800 py-10">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 items-start">
+        <!-- Logo -->
+        <div>
+          <img src="assets/logo.webp" alt="Company Logo" class="h-16 mb-4" />
+          <p class="text-sm text-gray-600">RB Construction Engineers Ltd</p>
+        </div>
+
+        <!-- Help Desk -->
+        <div>
+          <h4 class="text-lg font-semibold text-red-700 mb-4">SUPPORT</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="bx bx-phone text-red-600 text-lg"></i>
+              +254-702-284-771
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bx bx-envelope text-red-600 text-lg"></i>
+              admin@rbconstruction-engltd.com
+            </li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div>
+          <h4 class="text-lg font-semibold text-red-700 mb-4">LOCATION</h4>
+          <p class="flex items-start gap-2 text-sm">
+            <i class="bx bx-map text-red-600 text-lg"></i>
+            Waiyaki Way - Red Hill Link Road, Nairobi, Kenya
+          </p>
+        </div>
+
+        <!-- Socials -->
+        <div>
+          <h4 class="text-lg font-semibold text-red-700 mb-4">Follow Us</h4>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700"
+            >
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800"
+            >
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white hover:bg-pink-700"
+            >
+              <i class="bx bxl-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom note -->
+      <div
+        class="mt-10 border-t border-gray-300 pt-4 text-center text-sm text-gray-600"
+      >
+        © 2025 RB Construction Engineers Ltd. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Boxicons CDN -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Navbar background, blur, and shadow on scroll
+      const navbar = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add(
+            "bg-gray-900",
+            "bg-opacity-95",
+            "shadow-xl",
+            "backdrop-blur-lg"
+          );
+        } else {
+          navbar.classList.remove(
+            "bg-gray-900",
+            "bg-opacity-95",
+            "shadow-xl",
+            "backdrop-blur-lg"
+          );
+          navbar.classList.add(
+            "bg-gray-900",
+            "bg-opacity-40",
+            "backdrop-blur-md",
+            "shadow-none"
+          );
+        }
+      });
+    </script>
+
+    <script>
+      // Hero slider functionality
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? "1" : "0";
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("opacity-100", i === index);
+          dot.classList.toggle("opacity-50", i !== index);
+        });
+      }
+
+      function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+
+      // Auto slide every 5 seconds
+      setInterval(nextSlide, 5000);
+
+      // Dot click events
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          current = index;
+          showSlide(current);
+        });
+      });
+
+      // Initialize
+      showSlide(current);
+    </script>
+    <script>
+      const seeMoreBtn = document.getElementById("seeMoreBtn");
+      const moreServices = document.getElementById("moreServices");
+
+      seeMoreBtn.addEventListener("click", () => {
+        if (moreServices.classList.contains("hidden")) {
+          moreServices.classList.remove("hidden");
+          seeMoreBtn.textContent = "See Less";
+        } else {
+          moreServices.classList.add("hidden");
+          seeMoreBtn.textContent = "See More";
+        }
+      });
+    </script>
+  </body>
+</html>

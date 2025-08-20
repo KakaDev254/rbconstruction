@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RB Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Smooth transition for background, blur, and shadow */
+      header {
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 h-screen">
+    <!-- Navbar -->
+    <header
+      class="bg-gray-900 bg-opacity-40 text-white fixed w-full z-50 backdrop-blur-md shadow-none"
+    >
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- Logo Image -->
+        <a href="#">
+          <img
+            src="assets/logo.webp"
+            alt="RB Construction Logo"
+            class="h-10 md:h-12"
+          />
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 items-center">
+          <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
+          <li>
+            <a href="index.html#services" class="hover:text-yellow-500"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="index.html#projects" class="hover:text-yellow-500"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="index.html#about" class="hover:text-yellow-500">About</a>
+          </li>
+          <li>
+            <a
+              href="index.html#contact"
+              class="bg-yellow-500 text-gray-900 px-4 py-2 rounded hover:bg-yellow-400 font-semibold"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none text-2xl">
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul
+        id="mobile-menu"
+        class="hidden flex-col bg-gray-900 bg-opacity-90 text-white space-y-4 p-4 md:hidden"
+      >
+        <li>
+          <a href="index.html" class="block hover:text-yellow-500">Home</a>
+        </li>
+        <li>
+          <a href="index.html#services" class="block hover:text-yellow-500"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="index.html#projects" class="block hover:text-yellow-500"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="index.html#about" class="block hover:text-yellow-500"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html#contact"
+            class="block bg-yellow-500 text-gray-900 px-4 py-2 rounded hover:bg-yellow-400 font-semibold"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section
+      class="relative bg-gradient-to-r from-yellow-400 via-blue-900 to-red-500 text-white py-20"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Meet Our Team</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Behind every successful project is a dedicated team of professionals.
+          Get to know the people who make our vision a reality.
+        </p>
+      </div>
+
+      <!-- Decorative Wave Shape -->
+      <div
+        class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180"
+      >
+        <svg
+          class="relative block w-full h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          viewBox="0 0 1200 120"
+        >
+          <path
+            d="M985.66 92.83C906.67 72 823.78 56.5 739.76 56.5c-81.92 0-159.84 14.07-237.72 28.1C430.41 99.42 358.5 113.5 276.59 113.5c-81.92 0-164.81-14.53-243.8-34.58V120h1200V49.41c-79 20.05-162.9 43.42-242.93 43.42z"
+            fill="white"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <section class="py-16 px-6">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-12">The Team</h2>
+        <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <!-- Member Card -->
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="assets/rob1.jpeg"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Robinson Abuki</h3>
+            <p class="text-sm text-gray-500">Managing Director</p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=2"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Betty Kanana</h3>
+            <p class="text-sm text-gray-500">Operations Director</p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=3"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Conslata Robi</h3>
+            <p class="text-sm text-gray-500">
+              Operations Manager & Head of Showroom
+            </p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=4"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Linda Brenda</h3>
+            <p class="text-sm text-gray-500">Marketing Head</p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=5"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Allan Otieno</h3>
+            <p class="text-sm text-gray-500">
+              Main Technician - Ducting & Fabrication (Mechanical Ventilation
+              Systems)
+            </p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=6"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Valentine Ngaira</h3>
+            <p class="text-sm text-gray-500">
+              Main Technician - Air-conditioning & Refrigeration
+            </p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=7"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Rasto Ngoje</h3>
+            <p class="text-sm text-gray-500">
+              Service Engineer ~ HVAC Turnkey Installation
+            </p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=8"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Eng. Billy Ondieki</h3>
+            <p class="text-sm text-gray-500">
+              Consultant - Mechanical Engineer
+            </p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=9"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Stephen Muiruri</h3>
+            <p class="text-sm text-gray-500">
+              Consultant - Civil / Structural Engineer
+            </p>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+          >
+            <img
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              src="https://i.pravatar.cc/150?img=10"
+              alt="Avatar"
+            />
+            <h3 class="text-xl font-semibold">Lewis Omosa</h3>
+            <p class="text-sm text-gray-500">
+              Mechanical Engineer - Head of Plumbing Works
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <footer class="bg-gray-100 text-gray-800 py-10">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 items-start">
+        <!-- Logo -->
+        <div>
+          <img src="assets/logo.webp" alt="Company Logo" class="h-16 mb-4" />
+          <p class="text-sm text-gray-600">RB Construction Engineers Ltd</p>
+        </div>
+
+        <!-- Help Desk -->
+        <div>
+          <h4 class="text-lg font-semibold text-red-700 mb-4">SUPPORT</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="bx bx-phone text-red-600 text-lg"></i>
+              +254-702-284-771
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bx bx-envelope text-red-600 text-lg"></i>
+              admin@rbconstruction-engltd.com
+            </li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div>
+          <h4 class="text-lg font-semibold text-red-700 mb-4">LOCATION</h4>
+          <p class="flex items-start gap-2 text-sm">
+            <i class="bx bx-map text-red-600 text-lg"></i>
+            Waiyaki Way - Red Hill Link Road, Nairobi, Kenya
+          </p>
+        </div>
+
+        <!-- Socials -->
+        <div>
+          <h4 class="text-lg font-semibold text-red-700 mb-4">Follow Us</h4>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700"
+            >
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800"
+            >
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white hover:bg-pink-700"
+            >
+              <i class="bx bxl-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom note -->
+      <div
+        class="mt-10 border-t border-gray-300 pt-4 text-center text-sm text-gray-600"
+      >
+        © 2025 RB Construction Engineers Ltd. All rights reserved.
+      </div>
+    </footer>
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Navbar background, blur, and shadow on scroll
+      const navbar = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add(
+            "bg-gray-900",
+            "bg-opacity-95",
+            "shadow-xl",
+            "backdrop-blur-lg"
+          );
+        } else {
+          navbar.classList.remove(
+            "bg-gray-900",
+            "bg-opacity-95",
+            "shadow-xl",
+            "backdrop-blur-lg"
+          );
+          navbar.classList.add(
+            "bg-gray-900",
+            "bg-opacity-40",
+            "backdrop-blur-md",
+            "shadow-none"
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
